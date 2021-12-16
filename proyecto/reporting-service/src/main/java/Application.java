@@ -53,9 +53,8 @@ public class Application {
          * Registre las transacciones para informar según el tema(topic)
          */
 
-        for(String s: topics){
-            kafkaConsumer.subscribe(Collections.singleton(s));
-        }
+        kafkaConsumer.subscribe(topics);
+
 
         while (true) {
             //Se obtiene una lista con los nuevos mensajes del topic asociado al consumer
